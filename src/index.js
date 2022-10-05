@@ -1,2 +1,2 @@
-import {newComponent, builder} from '/src/buildPage.js';
-builder();
+import pageBuilder from './buildPage';
+pageBuilder();
