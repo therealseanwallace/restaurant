@@ -1,4 +1,4 @@
-import pageBuilder from "./buildPage";
+import pageBuilder from './buildPage';
 import makeFoodMenu from './menu';
 import './style.css';
 import componentFactory from './buildPage';
@@ -8,7 +8,6 @@ import addContactContent from './contact';
 const clearContent = () => {
   const getMain = document.getElementsByTagName('main');
   getMain[0].innerHTML = '';
-  console.log(getMain);
 };
 
 const loadTab = (e) => {
@@ -31,7 +30,6 @@ const addMenuListeners = () => {
   const ul = document.querySelector('.menu');
   const listItems = ul.getElementsByTagName('li');
   for (let i = 0; i < listItems.length; i += 1) {
-    console.log(listItems[i]);
     listItems[i].addEventListener('click', loadTab);
   }
 };

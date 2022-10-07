@@ -18,7 +18,6 @@ export default function makeFoodMenu() {
     const descDiv = componentFactory(`${item}DescDiv`, 'div', '.food-menu', 'desc-div', `${item}-desc-div`);
     descDiv.createDOMNode();
     const desc = componentFactory(`${item}-desc`, 'p', `#${item}-desc-div`, 'desc', `${item}-desc`);
-    //const desc = componentFactory(`${item}-desc`, 'p', 'croissant-desc-div', 'desc', `${item}-desc`);
     desc.createDOMNode();
     const selectDesc = document.querySelector(`#${item}-desc`);
     selectDesc.textContent = description;

@@ -1,8 +1,7 @@
 /* eslint-disable max-len */
-/* eslint-disable no-console */
 
 export const componentFactory = (name, type, parent, classes, id, src, text, value) => {
-  const createDOMNode = () => {// Creates a DOM node corresponding to the new object and assigns appropriate attributes
+  const createDOMNode = () => { // Creates a DOM node corresponding to the new object and assigns appropriate attributes
     const selectParent = document.querySelector(parent);
     const makeComponent = document.createElement(type);
     if (classes !== undefined) {
@@ -27,13 +26,7 @@ export const componentFactory = (name, type, parent, classes, id, src, text, val
   };
 };
 
-/*function makeFoodMenu() {
-  const makeMenu = componentFactory('foodMenu', 'div', 'main');
-  makeMenu.createDOMNode();
-}*/
-
 export default function pageBuilder() {
-  console.log('pageBuilder active');
   const header = 'header';
   const content = '#content';
   const div = 'div';
@@ -67,15 +60,10 @@ export default function pageBuilder() {
     makeHero.createDOMNode();
     const makeHeroH2 = componentFactory('heroh2', 'h2', hero, undefined, undefined, undefined, "'Le Croissant'");
     makeHeroH2.createDOMNode();
-  }
-  const addHomeContent = () => {
-    const makeH2 = componentFactory('mainH2', 'h2', main, undefined, undefined, undefined, 'French Pastries and Breads Crafted by Hand Daily');
   };
-  
   newHero();
   newHeader();
   newMenu();
   newMain();
-  //newLogo();
   newHeroText();
 }
